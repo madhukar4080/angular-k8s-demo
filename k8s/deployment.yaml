@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: angular
-          image: myacr.azurecr.io/angular-frontend:latest
+          image: santhoshcontainerregistry.azurecr.io/angular-frontend:latest
           ports:
             - containerPort: 80
