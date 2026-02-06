@@ -1,9 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: angular-frontend
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: angular-ingress
 spec:
   ingressClassName: nginx
   rules:
@@ -14,6 +12,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: angular-frontend
+                name: angular-service
                 port:
                   number: 80

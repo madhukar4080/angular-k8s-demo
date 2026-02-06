@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: angular-frontend
+  labels:
+    app: angular-frontend
 spec:
   replicas: 2
   selector:
@@ -13,7 +15,7 @@ spec:
         app: angular-frontend
     spec:
       containers:
-        - name: angular-frontend
-          image: ghcr.io/<GITHUB_ORG_OR_USER>/angular-k8s-demo:latest
+        - name: angular
+          image: myacr.azurecr.io/angular-frontend:latest
           ports:
             - containerPort: 80
